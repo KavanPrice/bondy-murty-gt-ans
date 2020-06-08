@@ -1,0 +1,15 @@
+\chapter{Graphs}
+
+\section{Graphs and Their Representation}
+
+\begin{ans}
+First, since $G$ is simple, we have $E(G) \subseteq \binom{V(G)}{2}$. That is, the edge set of $G$ is a subset of the set of unordered pairs of the elements of $V(G)$. We know that $\binom{|V(G)|}{2} = \binom{n}{2}$ counts the number of such unordered pairs, hence it follows that $m \le \binom{n}{2}$. We must have equality when all unordered pairs of vertices are in the edge set. This occurs in a complete graph.
+\end{ans}
+
+\begin{ans} \
+\begin{itemize}
+	\item[(a)] We will present a procedure for placing the edges between vertices to obtain the result. We begin with $n$ vertices in a bipartition $(X,Y)$ with $|X| = r$ and $|Y| = s$. Now for each vertex $v \in X$, we may place at most $s$ edges between $v$ and all vertices in $Y$ since $G$ is simple. So we may place at most $\underbrace{s + s + ... + s}_\text{$r$ times} = rs$ edges between the sets in the bipartition.
+	\item[(b)] We have $r + s = n$ since $(X,Y)$ is a bipartition. If $n$ is even, we obtain the maximum number of edges in $G$ when $r = s = \frac{n}{2}$. So by part (a) we have $m \le \frac{n}{2} \cdot \frac{n}{2} = \frac{n^2}{4}$. If $n$ is odd, we obtain the maximum number of edges in $G$ when, without loss of generality, we have $r = \lceil\frac{n}{2}\rceil = \frac{n+1}{2}$ and $s = \lfloor\frac{n}{2}\rfloor = \frac{n-1}{2}$. So by part (b) we have $m \le \frac{n+1}{2} \cdot \frac{n-1}{2} = \frac{n^2 - 1}{4} \leq \frac{n^2}{4}$.
+	\item[(c)] Equality holds when we have $|X| = |Y| = \frac{n}{2}$ for even $n = |V|$.
+\end{itemize}
+\end{ans}
