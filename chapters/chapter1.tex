@@ -51,3 +51,284 @@ Let $G$ be a $k$-regular graph. If $k=0$, then we have no edges in $G$ since the
 	\end{center}
 \end{itemize}
 \end{ans}
+
+\newpage
+
+\begin{ans} \
+\begin{itemize}
+	\item[(a)] \
+	\begin{figure}[h!]
+	\begin{minipage}{0.5\textwidth}
+	\begin{center}
+	\scalebox{0.7}{
+	\begin{tikzpicture}
+		\draw (0,0) node[draw,circle] (0) {$(0)$};
+		\draw (2,0) node[draw,circle] (1) {$(1)$};
+		
+		\draw (0) -- (1);
+	\end{tikzpicture}
+	}
+	\\
+	$Q_1$
+	\end{center}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+	\begin{center}
+	\scalebox{0.7}{
+	\begin{tikzpicture}
+		\draw (0,0) node[draw,circle] (00) {$(0,0)$};
+		\draw (0,2) node[draw,circle] (01) {$(0,1)$};
+		\draw (2,0) node[draw,circle] (10) {$(1,0)$};
+		\draw (2,2) node[draw,circle] (11) {$(1,1)$};
+		
+		\draw (00) -- (01);
+		\draw (00) -- (10);
+		\draw (01) -- (11);
+		\draw (10) -- (11);
+	\end{tikzpicture}
+	}
+	\\
+	$Q_2$
+	\end{center}
+	\end{minipage}
+	\
+	\begin{minipage}{\textwidth}
+	\begin{center}
+	\scalebox{0.7}{
+	\begin{tikzpicture}
+		\draw (0,0) node[draw,circle] (000) {$(0,0,0)$};
+		\draw (0,4) node[draw,circle] (001) {$(0,0,1)$};
+		\draw (4,0) node[draw,circle] (010) {$(0,1,0)$};
+		\draw (4,4) node[draw,circle] (011) {$(0,1,1)$};
+		\draw (2,-2) node[draw,circle] (100) {$(1,0,0)$};
+		\draw (2,2) node[draw,circle] (101) {$(1,0,1)$};
+		\draw (6,-2) node[draw,circle] (110) {$(1,1,0)$};
+		\draw (6,2) node[draw,circle] (111) {$(1,1,1)$};
+		
+		\draw (000) -- (001);
+		\draw (000) -- (010);
+		\draw (000) -- (100);
+		\draw (001) -- (011);
+		\draw (001) -- (101);
+		\draw (010) -- (011);
+		\draw (010) -- (110);
+		\draw (011) -- (111);
+		\draw (100) -- (101);
+		\draw (100) -- (110);
+		\draw (101) -- (111);
+		\draw (110) -- (111);
+	\end{tikzpicture}
+	}
+	\\
+	$Q_3$
+	\end{center}
+	\end{minipage}
+	\
+	\begin{minipage}{\textwidth}
+	\begin{center}
+	\scalebox{0.5}{
+	\begin{tikzpicture}
+		\draw (3,0) node[draw,circle] (0000) {$(0,0,0,0)$};
+		\draw (9,-2) node[draw,circle] (0001) {$(0,0,0,1)$};
+		\draw (12,-6) node[draw,circle] (0010) {$(0,0,1,0)$};
+		\draw (15,-10) node[draw,circle] (0011) {$(0,0,1,1)$};
+		\draw (15,-14) node[draw,circle] (0100) {$(0,1,0,0)$};
+		\draw (12,-18) node[draw,circle] (0101) {$(0,1,0,1)$};
+		\draw (9,-22) node[draw,circle] (0110) {$(0,1,1,0)$};
+		\draw (3,-24) node[draw,circle] (0111) {$(0,1,1,1)$};
+		\draw (-3,-24) node[draw,circle] (1000) {$(1,0,0,0)$};
+		\draw (-9,-22) node[draw,circle] (1001) {$(1,0,0,1)$};
+		\draw (-12,-18) node[draw,circle] (1010) {$(1,0,1,0)$};
+		\draw (-15,-14) node[draw,circle] (1011) {$(1,0,1,1)$};
+		\draw (-15,-10) node[draw,circle] (1100) {$(1,1,0,0)$};
+		\draw (-12,-6) node[draw,circle] (1101) {$(1,1,0,1)$};
+		\draw (-9,-2) node[draw,circle] (1110) {$(1,1,1,0)$};
+		\draw (-3,0) node[draw,circle] (1111) {$(1,1,1,1)$};
+		
+		\draw (0000) -- (0001);
+		\draw (0000) -- (0010);
+		\draw (0000) -- (0100);
+		\path [bend left] (0001) edge (0011);
+		\draw (0001) -- (0101);
+		\draw (0010) -- (0011);
+		\draw (0010) -- (0110);
+		\draw (0011) -- (0111);
+		\draw (0100) -- (0101);
+		\path [bend left] (0100) edge (0110);
+		\draw (0101) -- (0111);
+		\draw (0110) -- (0111);
+		\draw (1000) -- (1001);
+		\draw (1000) -- (1010);
+		\draw (1000) -- (1100);
+		\path [bend left] (1001) edge (1011);
+		\draw (1001) -- (1101);
+		\draw (1010) -- (1011);
+		\draw (1010) -- (1110);
+		\draw (1011) -- (1111);
+		\draw (1100) -- (1101);
+		\path [bend left] (1100) edge (1110);
+		\draw (1101) -- (1111);
+		\draw (1110) -- (1111);
+		\draw (0000) -- (1000);
+		\draw (0001) -- (1001);
+		\draw (0010) -- (1010);
+		\draw (0011) -- (1011);
+		\draw (0100) -- (1100);
+		\draw (0101) -- (1101);
+		\draw (0110) -- (1110);
+		\draw (0111) -- (1111);
+	\end{tikzpicture}
+	}
+	\\
+	$Q_4$
+	\end{center}
+	\end{minipage}
+	\end{figure}
+	\item[(b)] Considering $Q_n$, each vertex is an $n$-tuple with 2 options for each entry. Hence $v(Q_n) = 2^n$. For each vertex of $Q_n$, there are $n$ vertices that have an $n$-tuple that differ by a single entry, so $d(v) = n$ for $v \in V(Q_n)$. So by the degree-sum formula,
+	\begin{equation*}
+		\sum_{v \in V(Q_n)} d(v) = n \cdot 2^n = 2 \cdot e(Q_n) \
+		\implies e(Q_n) = \frac{n \cdot 2^n}{2} = n \cdot 2^{n-1}
+	\end{equation*}
+	\item[(c)] We partition $V(Q_n)$ into $(X,Y)$ where $X$ is the set of vertices containing an even number of 1's and $Y$ is the set of vertices containing an odd number of 1's. Clearly each vertex of $Q_n$ is in either $X$ or $Y$. Now take an arbitrary vertex $v \in X$. $v$ has an even number of 1's, so for any other vertex $u \in X$, we cannot have $uv \in E(Q_n)$ since we are required to change at least 2 numbers in the $n$-tuple of $v$ to attain the $n$-tuple of $u$, as $u$ also has an even number of 1's. This logic also holds for $Y$. Hence $(X,Y)$ is indeed a bipartition of $V(Q_n)$ and so $Q_n$ is bipartite.
+\end{itemize}
+\end{ans}
+
+\begin{ans} \
+\begin{itemize}
+	\item[(a)] \
+	\begin{figure}[h!]
+	\begin{minipage}{0.25\textwidth}
+	\begin{center}
+	\begin{tikzpicture}
+	\draw (0,0) node[draw,circle] (empty) {$\{\}$};
+	\draw (0,-2) node[draw,circle] (1) {$\{1\}$};
+	
+	\draw (empty) -- (1);
+	\end{tikzpicture}
+	\\
+	$BL_1$
+	\end{center}
+	\end{minipage}
+	\begin{minipage}{0.25\textwidth}
+	\begin{center}
+	\begin{tikzpicture}
+	\draw (0,0) node[draw,circle] (empty) {$\{\}$};
+	\draw (-1,-2) node[draw,circle] (1) {$\{1\}$};
+	\draw (1,-2) node[draw,circle] (2) {$\{2\}$};
+	\draw (0,-4) node[draw,circle] (12) {$\{1,2\}$};
+
+	\draw (empty) -- (1);
+	\draw (empty) -- (2);
+	\draw (1) -- (12);
+	\draw (2) -- (12);
+	\end{tikzpicture}
+	\\
+	$BL_2$
+	\end{center}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+	\begin{center}
+	\scalebox{0.9}{
+	\begin{tikzpicture}
+	\draw (0,0) node[draw,circle] (empty) {$\{\}$};
+	\draw (-2,-2) node[draw,circle] (1) {$\{1\}$};
+	\draw (0,-2) node[draw,circle] (2) {$\{2\}$};
+	\draw (2,-2) node[draw,circle] (3) {$\{3\}$};
+	\draw (-2,-4) node[draw,circle] (12) {$\{1,2\}$};
+	\draw (0,-4) node[draw,circle] (13) {$\{1,3\}$};
+	\draw (2,-4) node[draw,circle] (23) {$\{2,3\}$};
+	\draw (0,-6) node[draw,circle] (123) {$\{1,2,3\}$};
+	
+	\draw (empty) -- (1);
+	\draw (empty) -- (2);
+	\draw (empty) -- (3);
+	\draw (1) -- (12);
+	\draw (1) -- (13);
+	\draw (2) -- (12);
+	\draw (2) -- (23);
+	\draw (3) -- (13);
+	\draw (3) -- (23);
+	\draw (12) -- (123);
+	\draw (13) -- (123);
+	\draw (23) -- (123);
+	\end{tikzpicture}
+	}
+	\\
+	$BL_3$
+	\end{center}
+	\end{minipage}
+	\
+	\begin{minipage}{\textwidth}
+	\begin{center}
+	\scalebox{0.9}{
+	\begin{tikzpicture}
+	\draw (0,-0.5) node[draw,circle] (empty) {$\{\}$};
+	\draw (-3,-2) node[draw,circle] (1) {$\{1\}$};
+	\draw (-1,-2) node[draw,circle] (2) {$\{2\}$};
+	\draw (1,-2) node[draw,circle] (3) {$\{3\}$};
+	\draw (3,-2) node[draw,circle] (4) {$\{4\}$};
+	\draw (-5,-4) node[draw,circle] (12) {$\{1,2\}$};
+	\draw (-3,-4) node[draw,circle] (13) {$\{1,3\}$};
+	\draw (-1,-4) node[draw,circle] (14) {$\{1,4\}$};
+	\draw (1,-4) node[draw,circle] (23) {$\{2,3\}$};
+	\draw (3,-4) node[draw,circle] (24) {$\{2,4\}$};
+	\draw (5,-4) node[draw,circle] (34) {$\{3,4\}$};
+	\draw (-3,-6) node[draw,circle] (123) {$\{1,2,3\}$};
+	\draw (-1,-6) node[draw,circle] (124) {$\{1,2,4\}$};
+	\draw (1,-6) node[draw,circle] (134) {$\{1,3,4\}$};
+	\draw (3,-6) node[draw,circle] (234) {$\{2,3,4\}$};
+	\draw (0,-8) node[draw,circle] (1234) {$\{1,2,3,4\}$};
+	
+	\draw (empty) -- (1);
+	\draw (empty) -- (2);
+	\draw (empty) -- (3);
+	\draw (empty) -- (4);
+	\draw (1) -- (12);
+	\draw (1) -- (13);
+	\draw (1) -- (14);
+	\draw (2) -- (12);
+	\draw (2) -- (23);
+	\draw (2) -- (24);
+	\draw (3) -- (13);
+	\draw (3) -- (23);
+	\draw (3) -- (34);
+	\draw (4) -- (14);
+	\draw (4) -- (24);
+	\draw (4) -- (34);
+	\draw (12) -- (123);
+	\draw (12) -- (124);
+	\draw (13) -- (123);
+	\draw (13) -- (134);
+	\draw (14) -- (124);
+	\draw (14) -- (134);
+	\draw (23) -- (123);
+	\draw (23) -- (234);
+	\draw (24) -- (124);
+	\draw (24) -- (234);
+	\draw (34) -- (134);
+	\draw (34) -- (234);
+	\draw (123) -- (1234);
+	\draw (124) -- (1234);
+	\draw (134) -- (1234);
+	\draw (234) -- (1234);
+	\end{tikzpicture}
+	}
+	\\
+	$BL_4$
+	\end{center}
+	\end{minipage}
+	\end{figure}
+	\item[(b)] $v(BL_n)$ is given by the number of subsets of $\{1,...,n\}$, so $v(BL_n) = 2^n$. To determine $e(BL_n)$, we consider each ``level" of vertices in $BL_n$, that is the set of vertices representing sets of size $m$ where $1 \leq m \leq n$. First note that for any ``level" $m$ in $BL_n$, there are $C(n,m)$ vertices in that level by definition of $BL_n$. Now, for each vertex $v$ in ``level" $m$, consider its symmetric difference with the vertices in the previous ``level" $m-1$. There exist $m$ vertices in ``level" $m-1$ whose symmetric difference with $v$ is of size 1, since we may isolate each element in $v$ by selecting the correct set (of size $m-1$) in the previous ``level." Hence, summing over each ``level" in $BL_n$, we determine
+	\begin{equation*}
+		e(BL_n) = \sum_{m=1}^n {m \cdot C(n,m)} = 2^{n-1}\cdot n
+	\end{equation*}
+	\item[(c)] Given $n \in \mathbb{N}$, we formulate the pair $(X,Y)$ where $X = \{v \in V(BL_n): \text{$|v|$ is odd}\}$ and $Y = \{v \in V(BL_n): \text{$|v|$ is even}\}$ and wish to prove that $(X,Y)$ forms a bipartition of $BL_n$. Take arbitrary vertices $u,v \in X$, so $|u|$ and $|v|$ are even. We first note that
+	\begin{align*}
+		u \Delta v &= (u \setminus v) \cup (v \setminus u) \\
+		\implies |u \Delta v| &= |(u \setminus v) \cup (v \setminus u)| \\
+							  &= |u \setminus v| + |v \setminus u| - |(u \setminus v) \cap (v \setminus u)| \\
+							  &= |u \setminus v| + |v \setminus u|
+	\end{align*}
+	Assume, towards a contradiction, that exists an edge between $u$ and $v$ in $BL_n[X,Y]$, so we must have $|u \Delta v| = 1$, so either $(|u \setminus v|,|v \setminus u|) = (1,0)$ or $(|u \setminus v|,|v \setminus u|) = (0,1)$. Without loss of generality, assume that $|u \setminus v| = 1$ and $|v \setminus u| = 0$. Then there exists precisely one element of $u$ not in $v$ and there exist no elements of $v$ not in $u$. Hence we must have $u \supset v$ and $|u| = |v|+1$, a contradiction since both $|u|$ and $|v|$ are even. This argument clearly holds when $u$ and $v$ are exchanged. Hence we may not have an edge between any two vertices in $X$. Repeating this logic for arbitrary vertices in $Y$, we determine that $(X,Y)$ indeed gives a bipartition of $BL_n$.
+\end{itemize}
+\end{ans}
