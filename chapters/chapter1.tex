@@ -329,7 +329,7 @@ Let $G$ be a $k$-regular graph. If $k=0$, then we have no edges in $G$ since the
 							  &= |u \setminus v| + |v \setminus u| - |(u \setminus v) \cap (v \setminus u)| \\
 							  &= |u \setminus v| + |v \setminus u|
 	\end{align*}
-	Assume, towards a contradiction, that exists an edge between $u$ and $v$ in $BL_n[X,Y]$, so we must have $|u \Delta v| = 1$, so either $(|u \setminus v|,|v \setminus u|) = (1,0)$ or $(|u \setminus v|,|v \setminus u|) = (0,1)$. Without loss of generality, assume that $|u \setminus v| = 1$ and $|v \setminus u| = 0$. Then there exists precisely one element of $u$ not in $v$ and there exist no elements of $v$ not in $u$. Hence we must have $u \supset v$ and $|u| = |v|+1$, a contradiction since both $|u|$ and $|v|$ are even. This argument clearly holds when $u$ and $v$ are exchanged. Hence we may not have an edge between any two vertices in $X$. Repeating this logic for arbitrary vertices in $Y$, we determine that $(X,Y)$ indeed gives a bipartition of $BL_n$.
+	Assume, towards a contradiction, that there exists an edge between $u$ and $v$ in $BL_n[X,Y]$, so we must have $|u \Delta v| = 1$, so either $(|u \setminus v|,|v \setminus u|) = (1,0)$ or $(|u \setminus v|,|v \setminus u|) = (0,1)$. Without loss of generality, assume that $|u \setminus v| = 1$ and $|v \setminus u| = 0$. Then there exists precisely one element of $u$ not in $v$ and there exist no elements of $v$ not in $u$. Hence we must have $u \supset v$ and $|u| = |v|+1$, a contradiction since both $|u|$ and $|v|$ are even. This argument clearly holds when $u$ and $v$ are exchanged. Hence we may not have an edge between any two vertices in $X$. Repeating this logic for arbitrary vertices in $Y$, we determine that $(X,Y)$ indeed gives a bipartition of $BL_n$.
 \end{itemize}
 \end{ans}
 
@@ -338,11 +338,21 @@ Let $G$ be a $k$-regular graph. If $k=0$, then we have no edges in $G$ since the
 	\item[(a)] By the degree-sum formula, we have $\sum_{v \in V(G)} {d(v)} = 2m$. So, since each edge has one endpoint in $X$ and another in $Y$, we immediately see that $\sum_{v \in X} {d(v)} = \sum_{v \in Y} {d(v)} = m$.
 	\item[(b)] By our previous deduction, if $G$ is $k$-regular with $k>0$, we have
 	\begin{align*}
-	k \cdot |X| &= \sum_{v \in X} {d(v)} 
-				= \sum_{v \in Y} {d(v)} 
-				= k \cdot |Y| \\
-	\\
-	&\implies |X| = |Y|
+		k \cdot |X| &= \sum_{v \in X} {d(v)} 
+					= \sum_{v \in Y} {d(v)} 
+					= k \cdot |Y| \\
+		\\
+		&\implies |X| = |Y|
 	\end{align*}
 \end{itemize}
+\end{ans}
+
+\begin{ans}
+First consider an arbitrary part of $G$, say $X$, with size $a_j$. Since $G$ is $k$-partite, we immediately see that, for any vertex in $X$, the upper limit of edges in $G$ with that vertex as an endpoint is given by $a_1+...+a_k-a_j=n-a_j$. Hence we have, for some vertex $v \in X$,
+\begin{align*}
+	d(v) \leq n-a_j &\implies \sum_{u \in X} d(u) \leq |X| \cdot (n-a_j) = a_j(n-a_j) \\
+					&\implies \sum_{w \in V(G)} d(w) \leq \sum_{i=1}^k a_i(n-a_i) \\
+					&\implies 2m \leq \sum_{i=1}^k a_i(n-a_i) \text{ by the degree-sum formula} \\
+					&\implies m \leq \frac{1}{2}\sum_{i=1}^k a_i(n-a_i)
+\end{align*}
 \end{ans}
